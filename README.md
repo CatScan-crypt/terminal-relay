@@ -23,7 +23,7 @@ $TERMINAL_RELAY_DIR/
 A sender that is not running inside a VS Code terminal can look up the inbox in `~/.terminal-relay/workspaces.json`. It maps each open workspace folder to its inbox:
 ```json
 {
-  "E:\\projects\\my-app": { "dir": "C:\\Users\\me\\AppData\\Roaming\\Code\\User\\globalStorage\\catscan-crypt.terminal-relay\\workspaces\\my-app-1a2b3c4d5e6f", "pid": 12345, "updatedAt": "..." }
+  "E:\\projects\\my-app": { "dir": "C:\\Users\\me\\AppData\\Roaming\\Code\\User\\globalStorage\\catscn.terminal-relay\\workspaces\\my-app-1a2b3c4d5e6f", "pid": 12345, "updatedAt": "..." }
 }
 ```
 An entry is removed when its window closes.

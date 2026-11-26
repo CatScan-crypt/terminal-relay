@@ -3,7 +3,7 @@
 	"displayName": "Terminal Relay",
 	"description": "Let AI agents and scripts run commands in your VS Code / Cursor terminal and read back the output.",
 	"version": "0.4.0",
-	"publisher": "catscan-crypt",
+	"publisher": "CatScn",
 	"license": "SEE LICENSE IN LICENSE",
 	"icon": "media/icon.png",
 	"repository": {
