@@ -1,0 +1,11 @@
+.vscode/**
+src/**
+node_modules/**
+**/*.map
+**/*.vsix
+.gitignore
+tsconfig.json
+eslint.config.mjs
+vsc-extension-quickstart.md
+vite-task-notes.md
+scripts/**

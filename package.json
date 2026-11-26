@@ -1,0 +1,78 @@
+{
+	"name": "terminal-relay",
+	"displayName": "Terminal Relay",
+	"description": "Let AI agents and scripts run commands in your VS Code / Cursor terminal and read back the output.",
+	"version": "0.4.0",
+	"publisher": "catscan-crypt",
+	"license": "SEE LICENSE IN LICENSE",
+	"icon": "media/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/CatScan-crypt/terminal-relay.git"
+	},
+	"bugs": {
+		"url": "https://github.com/CatScan-crypt/terminal-relay/issues"
+	},
+	"homepage": "https://github.com/CatScan-crypt/terminal-relay#readme",
+	"categories": [
+		"Other",
+		"AI"
+	],
+	"keywords": [
+		"terminal",
+		"agent",
+		"ai",
+		"automation",
+		"claude",
+		"cursor",
+		"shell"
+	],
+	"engines": {
+		"vscode": "^1.93.0"
+	},
+	"main": "./out/extension.js",
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": false,
+			"description": "Terminal Relay runs commands in your terminal, so it only runs in trusted folders."
+		},
+		"virtualWorkspaces": false
+	},
+	"contributes": {
+		"configuration": {
+			"title": "Terminal Relay",
+			"properties": {
+				"terminalRelay.logAllTerminals": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Also log commands and output of terminals you opened yourself, not only the ones Terminal Relay opened. Logs can contain secrets you type or print, and agents can read them."
+				},
+				"terminalRelay.logRetentionMinutes": {
+					"type": "number",
+					"default": 180,
+					"minimum": 0,
+					"markdownDescription": "How long terminal history logs and finished command results are kept, in minutes. `0` turns history logs off and deletes finished results after a minute."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"package": "vsce package",
+		"bump:patch": "npm version patch --no-git-tag-version && npm run package",
+		"bump:minor": "npm version minor --no-git-tag-version && npm run package",
+		"bump:major": "npm version major --no-git-tag-version && npm run package",
+		"test:e2e": "node scripts/e2e-test.js"
+	},
+	"devDependencies": {
+		"@types/node": "^18.19.130",
+		"@types/vscode": "^1.93.0",
+		"@vscode/vsce": "^4.0.0",
+		"typescript": "^5.3.3"
+	}
+}
